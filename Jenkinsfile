@@ -35,7 +35,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying to Staging using Docker Compose...'
-                bat "docker-compose up -d"
+                bat "docker compose up -d"
             }
         }
         stage('Release') {
@@ -56,7 +56,7 @@ pipeline {
     post {
         always {
             echo 'Cleaning up test infrastructure...'
-            bat "docker-compose down"
+            bat "docker compose down"
         }
     }
 }
