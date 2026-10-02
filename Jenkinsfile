@@ -17,7 +17,7 @@ pipeline {
         stage('Code Quality') {
             steps {
                 echo 'Running SonarQube Analysis...'
-                bat 'npx sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT} -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000'
+                bat 'npx sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT} -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.token="squ_f3b57fea9273dd3d8f38e30ed264b53098380b07"'
             }
         }
         stage('Build') {
