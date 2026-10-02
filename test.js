@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../server.js');
+const app = require('./server.js');
 
 describe('Canteen Inventory API Tests', () => {
     it('GET /health should return 200 OK', async () => {
